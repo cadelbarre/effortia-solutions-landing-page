@@ -1,0 +1,29 @@
+---
+import Design from "@components/icons/design.astro";
+import Mobile from "@components/icons/mobile.astro";
+import Internet from "@components/icons/internet.astro";
+import SocialMedia from "@components/icons/social-media.astro";
+import User from "@components/icons/user.astro";
+import Laptop from "@components/icons/laptop.astro";
+
+interface Props {
+    icon: string;
+}
+const { icon } = Astro.props;
+---
+
+{icon === "design" && <Design color="#ED7D3A" className="w-10 h-10" />}
+
+{icon === "mobile" && <Mobile color="#ED7D3A" className="w-10 h-10" />}
+
+{icon === "internet" && <Internet color="#ED7D3A" className="w-10 h-10" />}
+
+{
+    icon === "social-media" && (
+        <SocialMedia color="#ED7D3A" className="w-10 h-10" />
+    )
+}
+
+{icon === "user" && <User color="#ED7D3A" className="w-10 h-10" />}
+
+{icon === "laptop" && <Laptop color="#ED7D3A" className="w-10 h-10" />}

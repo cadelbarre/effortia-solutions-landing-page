@@ -1,0 +1,46 @@
+---
+import Section from "@components/ui/section.astro";
+import Title from "@components/ui/title.astro";
+
+import { servicios } from "@assets/business-data.json";
+---
+
+<Section className="bg-gray-800 rounded-xl p-10">
+    <header class="text-white">
+        <Title
+            text="Nuestros servicios que te ayudan a crecer"
+            className="text-white text-center w-[20ch] mx-auto"
+        />
+    </header>
+    <div class="grid grid-cols-3 gap-x-8 mt-16">
+        {
+            servicios.map(({ title, thumbail, descripcion, alt, items }) => {
+                return (
+                    <article class="transition-transform duration-500 ease-in-out hover:scale-105">
+                        <picture>
+                            <img
+                                src={thumbail}
+                                alt={alt}
+                                class="rounded-lg"
+                                loading="lazy"
+                            />
+                        </picture>
+                        <div class="p-8 bg-white rounded-b-lg space-y-1">
+                            <h3 class="font-bold text-lg text-primary">
+                                {title}
+                            </h3>
+                            <p>{descripcion}</p>
+                            <ul class="list-disc pl-4 pt-4">
+                                {items.map((item) => (
+                                    <li>
+                                        <strong>{item}</strong>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </article>
+                );
+            })
+        }
+    </div>
+</Section>

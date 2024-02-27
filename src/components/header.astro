@@ -1,0 +1,25 @@
+---
+import { slogan } from "@assets/business-data.json";
+
+const sizeHeader = "w-screen h-screen max-h-[700px]";
+---
+
+<header
+    class={`${sizeHeader} bg-fixed bg-[url('https://flywebwp.websitelayout.net/wp-content/uploads/2024/02/slide-12.jpg')] bg-no-repeat bg-top bg-cover relative`}
+>
+    <div class={`absolute ${sizeHeader} bg-gray-900/80 z-10 inset-0`}></div>
+
+    <div
+        class={`${sizeHeader} grid place-content-center text-center relative z-20 space-y-4`}
+    >
+        <h6 class="text-primary font-extrabold tracking-wider uppercase">
+            Bienvenidos a Effortia Solutions
+        </h6>
+
+        <h1
+            class="text-white font-extrabold tracking-tight text-7xl text-balance"
+        >
+            {slogan}
+        </h1>
+    </div>
+</header>

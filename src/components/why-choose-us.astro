@@ -1,0 +1,51 @@
+---
+import Section from "@components/ui/section.astro";
+import Title from "@components/ui/title.astro";
+import IconRender from "@components/icons-render.astro";
+
+import { beneficios } from "@assets/business-data.json";
+---
+
+<Section className="grid grid-cols-5">
+    <div class="col-span-3 pr-20 space-y-8">
+        <header class="space-y-2">
+            <span class="text-primary font-extrabold text-sm"
+                >¿ Por qué escogernos ?</span
+            >
+            <Title
+                text="Tu negocio online disponible 24/7"
+                className="text-balance"
+            />
+        </header>
+        <p class="w-[50ch]">
+            Estas son algunas de las razones del porque nuestros clientes
+            confian en nosotros para apoyarlos en sus procesos productivos,
+            diseño web y redes sociales.
+        </p>
+
+        <hr />
+
+        <ul class="grid grid-cols-2 gap-x-12 gap-y-10">
+            {
+                beneficios.slice(0, 6).map(({ descripcion, nombre, icon }) => {
+                    return (
+                        <li class="flex flex-col space-y-1">
+                            <IconRender icon={icon} />
+                            <h5 class="font-bold text-balance leading-tight text-lg text-gray-800">
+                                {nombre}
+                            </h5>
+                            <p class="text-balance">{descripcion}</p>
+                        </li>
+                    );
+                })
+            }
+        </ul>
+    </div>
+    <div class="col-span-2">
+        <img
+            class="rounded-lg h-full object-cover"
+            src="https://flywebwp.websitelayout.net/wp-content/uploads/2024/02/about23.jpg"
+            alt=""
+        />
+    </div>
+</Section>

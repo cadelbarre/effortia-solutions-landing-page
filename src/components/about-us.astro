@@ -1,0 +1,63 @@
+---
+import Section from "@components/ui/section.astro";
+import Anchor from "@components/ui/anchor.astro";
+import Title from "@components/ui/title.astro";
+import Check from "@components/icons/check.astro";
+
+import { introServicios, empresa } from "@assets/business-data.json";
+---
+
+<Section className="grid grid-cols-2">
+    <div class="grid grid-cols-2 gap-8">
+        <img
+            class="rounded-lg h-full object-cover"
+            src="https://flywebwp.websitelayout.net/wp-content/uploads/2024/02/about17.jpg"
+            alt=""
+        />
+        <img
+            class="rounded-lg h-full object-cover"
+            src="https://flywebwp.websitelayout.net/wp-content/uploads/2024/02/about17.jpg"
+            alt=""
+        />
+    </div>
+    <div class="pl-20 space-y-8">
+        <header class="space-y-2">
+            <span class="text-primary font-extrabold text-sm"
+                >¿ Quienes Somos ?</span
+            >
+            <Title text={empresa} />
+        </header>
+
+        <div class="space-y-4">
+            <p>
+                ¡Bienvenidos! Somos un equipo con capacidades y habilidades,
+                cada uno especialista en su área, dispuestos a cumplir y
+                satisfacer sus necesidades como clientes.
+            </p>
+            <p>
+                Ofrecemos servicios que en conjunto con nuestros clientes
+                creamos <strong>soluciones personalizadas</strong> que les ayudan
+                alcanzar sus objetivos, ya sea mejorar su presencia en línea, aumentar
+                sus ventas ó crear un sitio web ó tienda virtual.
+            </p>
+            <p>Algunos de los servicios que ofrecemos son:</p>
+        </div>
+
+        <ul class="grid grid-cols-2 gap-x-6 gap-y-4">
+            {
+                introServicios.map((item) => {
+                    return (
+                        <li class="flex gap-x-2 items-center">
+                            <Check className="text-gray-800" />
+                            <h5 class="font-medium text-gray-800">{item}</h5>
+                        </li>
+                    );
+                })
+            }
+        </ul>
+
+        <div class="pt-4">
+            <Anchor href="#" target="_blank">Contáctanos</Anchor>
+        </div>
+    </div>
+</Section>

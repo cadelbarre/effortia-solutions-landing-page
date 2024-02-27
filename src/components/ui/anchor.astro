@@ -1,0 +1,18 @@
+---
+interface Props {
+    href: string;
+    target: string;
+}
+
+const { href, target } = Astro.props;
+---
+
+<div class="transition-transform ease-in-out duration-300 hover:-translate-y-1">
+    <a
+        href={href}
+        target={target}
+        class="px-6 py-3 font-medium bg-primary text-white rounded-lg shadow-lg shadow-primary/50 cursor-pointer"
+    >
+        <slot />
+    </a>
+</div>
