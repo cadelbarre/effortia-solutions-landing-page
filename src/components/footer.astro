@@ -1,0 +1,10 @@
+---
+import { url } from "@assets/business-data.json";
+const currentYear = new Date().getFullYear();
+---
+
+<div class="bg-gray-800 border-t border-gray-100 py-4">
+    <div class="text-center text-white">
+        © {currentYear}. <span class="font-semibold text-primary">{url}</span>
+    </div>
+</div>
