@@ -1,0 +1,16 @@
+name: "effortia"
+on:
+    - push
+jobs: 
+    install:
+        runs-on: ubuntu-latest
+    
+        steps:
+          - uses: pnpm/action-setup@v3
+            with:
+                version: 8
+          - name: install dependencies
+            run: pnpm install
+            
+          - name: build
+            run: pnpm build
