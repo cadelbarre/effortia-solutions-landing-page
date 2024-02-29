@@ -17,12 +17,13 @@ const inputCSS =
             </p>
         </header>
         <fieldset>
-            <form class="grid grid-cols-2 gap-x-8 gap-y-4 mt-8">
+            <form class="grid grid-cols-2 gap-x-8 gap-y-4 mt-8" id="form">
                 <label class="block text-gray-800 space-y-1">
                     <span class="font-medium">Nombre</span>
                     <input
                         type="text"
                         id="nombre"
+                        name="nombre"
                         placeholder="Carlos Perez"
                         required
                         class={inputCSS}
@@ -34,6 +35,7 @@ const inputCSS =
                     <input
                         type="email"
                         id="email"
+                        name="email"
                         placeholder="nicolas@mail.com"
                         required
                         class={inputCSS}
@@ -45,6 +47,7 @@ const inputCSS =
                     <input
                         type="text"
                         id="celular"
+                        name="celular"
                         placeholder="3001232456"
                         required
                         class={inputCSS}
@@ -70,6 +73,7 @@ const inputCSS =
                         cols="10"
                         rows="5"
                         id="mensaje"
+                        name="mensaje"
                         placeholder="Estoy interesad@ en..."
                         required
                         class={inputCSS}></textarea>
@@ -83,3 +87,13 @@ const inputCSS =
         <h3>Información</h3>
     </div>
 </Section>
+
+<script>
+    const form = document.querySelector("#form");
+    form?.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const target = e.target;
+
+        const data = Object.fromEntries(new FormData(target));
+    });
+</script>
