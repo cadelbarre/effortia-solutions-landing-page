@@ -1,5 +1,17 @@
+---
+import { twMerge } from "tailwind-merge";
+
+interface Props {
+    className?: string;
+}
+const { className } = Astro.props;
+---
+
 <button
-    class="px-6 py-3 font-medium bg-primary text-white rounded-lg shadow-lg shadow-primary/50"
+    class={twMerge(
+        "px-6 py-3 font-medium bg-primary text-white rounded-lg shadow-lg shadow-primary/50 md:text-base text-sm",
+        className,
+    )}
 >
     <slot />
 </button>
