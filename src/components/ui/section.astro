@@ -7,6 +7,11 @@ interface Props {
 const { className } = Astro.props;
 ---
 
-<section class={twMerge("max-w-6xl mx-auto py-28", className)}>
+<section
+    class={twMerge(
+        "max-w-6xl mx-auto py-16 lg:py-28 px-6 md:px-10 xl:px-0",
+        className,
+    )}
+>
     <slot />
 </section>

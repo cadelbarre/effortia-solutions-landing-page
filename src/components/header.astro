@@ -1,7 +1,7 @@
 ---
 import { slogan } from "@assets/business-data.json";
 
-const sizeHeader = "w-screen h-screen max-h-[700px]";
+const sizeHeader = "w-screen h-screen max-h-[400px] md:max-h-[700px]";
 ---
 
 <header
@@ -12,12 +12,14 @@ const sizeHeader = "w-screen h-screen max-h-[700px]";
     <div
         class={`${sizeHeader} grid place-content-center text-center relative z-20 space-y-4`}
     >
-        <h6 class="text-primary font-extrabold tracking-wider uppercase">
+        <h6
+            class="text-primary text-xs md:text-base font-extrabold tracking-wider uppercase"
+        >
             Bienvenidos a Effortia Solutions
         </h6>
 
         <h1
-            class="text-white font-extrabold tracking-tight text-7xl text-balance"
+            class="text-white font-extrabold tracking-tight text-2xl md:text-5xl lg:text-7xl text-balance"
         >
             {slogan}
         </h1>

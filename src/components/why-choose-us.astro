@@ -6,8 +6,8 @@ import IconRender from "@components/icons-render.astro";
 import { beneficios } from "@assets/business-data.json";
 ---
 
-<Section className="grid grid-cols-5">
-    <div class="col-span-3 pr-20 space-y-8">
+<Section className="grid lg:grid-cols-5 gap-y-6 lg:gap-y-0">
+    <div class="md:col-span-3 lg:pr-20 space-y-5 md:space-y-8">
         <header class="space-y-2">
             <span class="text-primary font-extrabold text-sm"
                 >¿ Por qué escogernos ?</span
@@ -17,7 +17,7 @@ import { beneficios } from "@assets/business-data.json";
                 className="text-balance"
             />
         </header>
-        <p class="w-[50ch]">
+        <p class="max-w-[50ch]">
             Estas son algunas de las razones del porque nuestros clientes
             confian en nosotros para apoyarlos en sus procesos productivos,
             diseño web y redes sociales.
@@ -25,13 +25,13 @@ import { beneficios } from "@assets/business-data.json";
 
         <hr />
 
-        <ul class="grid grid-cols-2 gap-x-12 gap-y-10">
+        <ul class="grid grid-cols-2 gap-x-6 md:gap-x-12 gap-y-8 md:gap-y-10">
             {
                 beneficios.slice(0, 6).map(({ descripcion, nombre, icon }) => {
                     return (
                         <li class="flex flex-col space-y-1">
                             <IconRender icon={icon} />
-                            <h5 class="font-bold text-balance leading-tight text-lg text-gray-800">
+                            <h5 class="font-bold text-balance leading-tight text-md md:text-lg text-gray-800">
                                 {nombre}
                             </h5>
                             <p class="text-balance">{descripcion}</p>
@@ -41,7 +41,9 @@ import { beneficios } from "@assets/business-data.json";
             }
         </ul>
     </div>
-    <div class="col-span-2">
+    <div
+        class="md:col-span-5 lg:col-span-2 h-full object-cover bg-gray-200 rounded-lg"
+    >
         <img
             class="rounded-lg h-full object-cover"
             src="https://flywebwp.websitelayout.net/wp-content/uploads/2023/09/02.jpg"
