@@ -6,7 +6,7 @@ import AsideContact from "@components/aside-contact.astro";
 import FormContact from "@components/form-contact.astro";
 ---
 
-<Section className="grid lg:grid-cols-5 gap-12">
+<Section className="grid lg:grid-cols-5 gap-12" id="contacto">
     <div class="md:col-span-3">
         <header class="space-y-2">
             <Title text="Formulario de Contacto" />
@@ -17,7 +17,9 @@ import FormContact from "@components/form-contact.astro";
         </header>
         <FormContact />
     </div>
-    <div class="text-white md:col-span-2 bg-gray-800 rounded-lg py-20 px-16">
+    <div
+        class="text-white md:col-span-2 bg-gray-800 rounded-lg py-16 lg:py-20 px-12 lg:px-16"
+    >
         <AsideContact />
     </div>
 </Section>
