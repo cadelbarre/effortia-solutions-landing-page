@@ -3,10 +3,10 @@
     "descripcion": "Diseño y desarrollo de páginas web profesionales en barranquilla, optimizadas para generar contactos, cotizaciones y ventas. Diseñamos tu página web de acuerdo a tus necesidades. Desarrollo de aplicaciones móviles.",
     "keywords": "paginas web, desarrollo web barranquilla, diseño web, diseño web barranquilla, ecommerce, tiendas vituales, desarrollo web colombia, SEO, posicionamiento web, hosting, dominios web, moviles, apps, social media, redes sociales",
     "empresa": "Effortia solutions",
-    "url": "effortia.com.co",
+    "url": "effortiaweb.com",
     "slogan": "Diseño inteligente, resultados sorprendentes.",
     "telefono": "(605) 300 814 3360",
-    "email": "sac@effortia.com.co",
+    "email": "sac@effortiaweb.com",
     "ubicacion": "Barranquilla, Colombia",
     "beneficios": [
         {
@@ -50,7 +50,7 @@
         {
             "title": "Diseño Web",
             "descripcion": "Aplicamos excelentes técnicas de diseño y maquetación web para asegurar una experiencia visualmente atractiva y altamente funcional para los usuarios.",
-            "thumbail": "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "thumbail": "diseno-web.avif",
             "alt": "imagen servicio de diseño web",
             "items": [
                 "Diseños a la medida",
@@ -60,7 +60,7 @@
         {
             "title": "Desarrollo Web",
             "descripcion": "Implementamos las funcionalidades más avanzadas en el desarrollo de sitios web con el fin de garantizar una experiencia óptima para el usuario.",
-            "thumbail": "https://images.unsplash.com/photo-1590608897129-79da98d15969?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "thumbail": "desarrollo-web.avif",
             "alt": "imagen servicio de desarrollo web",
             "items": [
                 "Webs corporativas",
@@ -71,7 +71,7 @@
         {
             "title": "Aplicaciones Web",
             "descripcion": "Integramos herramientas que nos permiten crear y gestionar la variedad de funciones y caracteristicas que ayudan a potenciar tus estrategias de ventas.",
-            "thumbail": "https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "thumbail": "aplicaciones-web.avif",
             "alt": "imagen servicio de aplicacion web",
             "items": [
                 "Software personalizado",
