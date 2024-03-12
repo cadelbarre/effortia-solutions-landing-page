@@ -1,6 +1,6 @@
 <a name="readme-top"></a>
 
-< align="center">
+<div align="center">
 
 <a href="https://github.com/midudev/la-velada-web-oficial">
   <img width="300px" src="./public/effortia-logo-white.png" alt="Logo" width="800" />
