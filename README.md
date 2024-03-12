@@ -1,47 +1,49 @@
-# Astro Starter Kit: Minimal
+<a name="readme-top"></a>
 
-```sh
-npm create astro@latest -- --template minimal
-```
+<div align="center">
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+<a href="https://github.com/midudev/la-velada-web-oficial">
+  <img width="300px" src="./public/effortia-logo-white.png" alt="Logo" width="800" />
+</a>
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+<div style="width:60ch; margin-block:30px">
+Somos un equipo con capacidades y habilidades, cada uno especialista en su área, dispuestos a cumplir y satisfacer sus necesidades como clientes.
+</div>
 
-## 🚀 Project Structure
+<img  src="./public/readme-image.webp" alt="Logo" width="800" />
 
-Inside of your Astro project, you'll see the following folders and files:
+</div>
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+##  Tecnólogias principales
+- [![Astro][astro-badge]][astro-url] - The web framework for content-driven websites.
+- [![Typescript][typescript-badge]][typescript-url] - JavaScript con sintaxis para el tipado.
+- [![Tailwind CSS][tailwind-badge]][tailwind-url] - Utilidad CSS framework para construcción rápida de diseño web.
+- [![Vercel][vercel-badge]][vercel-url] - Despliegue de la página web.
+- [![SendGrid][sendgrid-badge]][sendgrid-url] – Entrega de correos electrónicos.
+- [![Overtracking][overtracking-badge]][overtracking-url] – Herramienta de análisis web sin cookies.
 
-Any static assets, like images, can be placed in the `public/` directory.
+<p align="right"><a href="#readme-top">⬆️ Arriba</a></p>
 
-## 🧞 Commands
 
-All commands are run from the root of the project, from a terminal:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+[astro-url]: https://astro.build/
+[astro-badge]: https://img.shields.io/badge/Astro-fff?style=for-the-badge&logo=astro&logoColor=bd303a&color=352563
+
+[typescript-url]: https://www.typescriptlang.org/
+[typescript-badge]: https://img.shields.io/badge/Typescript-007ACC?style=for-the-badge&logo=typescript&logoColor=white&color=blue
+
+[tailwind-url]: https://tailwindcss.com/
+[tailwind-badge]: https://img.shields.io/badge/Tailwind-ffffff?style=for-the-badge&logo=tailwindcss&logoColor=38bdf8
+
+[vercel-badge]: https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=ffffff
+[vercel-url]: https://vercel.com/
+
+[sendgrid-badge]: https://img.shields.io/badge/SendGrid-1A82E2?style=for-the-badge
+[sendgrid-url]:https://sendgrid.com/
+
+[overtracking-badge]: https://img.shields.io/badge/overtracking-11DBC1?style=for-the-badge
+[overtracking-url]: https://overtracking.com/
