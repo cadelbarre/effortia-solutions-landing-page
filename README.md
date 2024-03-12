@@ -1,14 +1,14 @@
 <a name="readme-top"></a>
 
-<div align="center">
+< align="center">
 
 <a href="https://github.com/midudev/la-velada-web-oficial">
   <img width="300px" src="./public/effortia-logo-white.png" alt="Logo" width="800" />
 </a>
 
-<div style="width:60ch; margin-block:30px">
+
 Somos un equipo con capacidades y habilidades, cada uno especialista en su área, dispuestos a cumplir y satisfacer sus necesidades como clientes.
-</div>
+
 
 <img  src="./public/readme-image.webp" alt="Logo" width="800" />
 
