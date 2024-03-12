@@ -83,8 +83,10 @@ const inputCSS =
     const form = document.querySelector("#form");
     form?.addEventListener("submit", (e) => {
         e.preventDefault();
-        const target = e.target;
+        const target = e.target as HTMLFormElement;
 
         const data = Object.fromEntries(new FormData(target));
+
+        console.log({ data });
     });
 </script>
