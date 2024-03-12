@@ -6,9 +6,10 @@ import Services from "@components/services.astro";
 import AboutUs from "@components/about-us.astro";
 import Footer from "@components/footer.astro";
 import MoveToUp from "@components/move-to-up.astro";
+import Whatsapp from "@components/whatsapp.astro";
 import Contact from "@components/contact.astro";
 
-import { titulo, descripcion, keywords } from "@assets/business-data.json";
+import { titulo, descripcion, keywords, url } from "@assets/business-data.json";
 ---
 
 <html lang="es">
@@ -17,7 +18,7 @@ import { titulo, descripcion, keywords } from "@assets/business-data.json";
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<link rel="canonical" href="https://effortia.com.co" />
+		<link rel="canonical" href={`https://${url}`} />
 		<title>{titulo}</title>
 		<meta name="keywords" content={keywords} />
 
@@ -31,7 +32,7 @@ import { titulo, descripcion, keywords } from "@assets/business-data.json";
 		<meta name="og:image" content="/og.jpg" />
 		<meta name="og:title" content={titulo} />
 		<meta name="og:description" content={descripcion} />
-		<meta name="og:url" content="https://effortia.com.co" />
+		<meta name="og:url" content={`https://${url}`} />
 		<meta name="og:site_name" content="Effortia Solutions" />
 		<meta name="og:type" content="website" />
 		<meta name="og:locale" content="es_ES" />
@@ -41,17 +42,20 @@ import { titulo, descripcion, keywords } from "@assets/business-data.json";
 	</head>
 	<body>
 		<Header />
-		<AboutUs />
-		<WhyChooseUs />
-		<Services />
-		<!--
-		
-		<p>algunos proyectos</p>
-		
-		-->
-		<Contact />
-		<Footer />
-		<MoveToUp />
+		<main>
+			<AboutUs />
+			<WhyChooseUs />
+			<Services />
+			<!--
+			
+			<p>algunos proyectos</p>
+			
+			-->
+			<Contact />
+			<Footer />
+			<MoveToUp />
+			<Whatsapp />
+		</main>
 	</body>
 </html>
 
