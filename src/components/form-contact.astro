@@ -2,10 +2,10 @@
 import Button from "@components/ui/button.astro";
 
 const inputCSS =
-    "w-full py-2 px-4 bg-transparent outline-none border border-gray-400 rounded-md";
+    "w-full py-2 px-4 bg-transparent outline-none border border-gray-400 rounded-md disabled:bg-gray-400/20 disabled:cursor-wait";
 ---
 
-<fieldset>
+<fieldset id="form-fieldset">
     <form
         class="flex flex-col md:grid md:grid-cols-2 gap-x-8 gap-y-4 mt-8"
         id="form"
@@ -74,19 +74,57 @@ const inputCSS =
         </label>
 
         <div class="col-span-2 md:col-span-1">
-            <Button className="w-full">Enviar</Button>
+            <Button className="w-full disabled:opacity-90 disabled:cursor-wait"
+                >Enviar</Button
+            >
         </div>
     </form>
 </fieldset>
 
 <script>
+    import emailjs from "@emailjs/browser";
+    import swal from "sweetalert";
+    import isEmpty from "just-is-empty";
+
     const form = document.querySelector("#form");
+    const fieldset = document.querySelector("#form-fieldset");
+
+    // Escuchamos el evento submit
     form?.addEventListener("submit", (e) => {
         e.preventDefault();
         const target = e.target as HTMLFormElement;
 
+        // Objeto con la información del formulario
         const data = Object.fromEntries(new FormData(target));
 
-        console.log({ data });
+        // Asignamos disabled para que no envien nuevamente
+        fieldset?.setAttribute("disabled", "true");
+
+        if (isEmpty(data)) {
+            return swal({
+                title: "Ha ocurrido un error con el servidor",
+                icon: "error",
+            });
+        }
+
+        emailjs
+            .send("service_vjt65x6", "template_pfgd0mc", data, {
+                publicKey: "IF0IZ6pmHpB4Jw65s",
+            })
+            .then(
+                (response) =>
+                    swal({
+                        title: "Correo enviado correctamente",
+                        icon: "success",
+                    }),
+                void target.reset(),
+            )
+            .catch((error) =>
+                swal({
+                    title: "Error al momento de enviar el correo",
+                    icon: "error",
+                }),
+            )
+            .finally(() => fieldset?.removeAttribute("disabled"));
     });
 </script>
