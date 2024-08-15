@@ -50,7 +50,7 @@
         {
             "title": "Diseño Web",
             "descripcion": "Aplicamos excelentes técnicas de diseño y maquetación web para asegurar una experiencia visualmente atractiva y altamente funcional para los usuarios.",
-            "thumbail": "diseno-web.avif",
+            "thumbail": "marcos/diseno-web.avif",
             "alt": "imagen servicio de diseño web",
             "items": [
                 "Diseños a la medida",
@@ -60,7 +60,7 @@
         {
             "title": "Desarrollo Web",
             "descripcion": "Implementamos las funcionalidades más avanzadas en el desarrollo de sitios web con el fin de garantizar una experiencia óptima para el usuario.",
-            "thumbail": "desarrollo-web.avif",
+            "thumbail": "marcos/desarrollo-web.avif",
             "alt": "imagen servicio de desarrollo web",
             "items": [
                 "Webs corporativas",
@@ -71,7 +71,7 @@
         {
             "title": "Aplicaciones Web",
             "descripcion": "Integramos herramientas que nos permiten crear y gestionar la variedad de funciones y caracteristicas que ayudan a potenciar tus estrategias de ventas.",
-            "thumbail": "aplicaciones-web.avif",
+            "thumbail": "marcos/aplicaciones-web.avif",
             "alt": "imagen servicio de aplicacion web",
             "items": [
                 "Software personalizado",
