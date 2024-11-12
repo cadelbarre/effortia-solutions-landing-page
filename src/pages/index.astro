@@ -4,71 +4,78 @@ import WhyChooseUs from "@components/why-choose-us.astro";
 import Header from "@components/header.astro";
 import Services from "@components/services.astro";
 import AboutUs from "@components/about-us.astro";
+import Section from "@components/ui/section.astro";
 import Footer from "@components/footer.astro";
 import MoveToUp from "@components/move-to-up.astro";
 import Whatsapp from "@components/whatsapp.astro";
 import Contact from "@components/contact.astro";
 import Clients from "@components/clients.astro";
+import Facts from "@components/facts.astro";
+import ClientsLogos from "@components/clientes-logos";
 
 import { titulo, descripcion, keywords, url } from "@assets/business-data.json";
 ---
 
 <html lang="es">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="canonical" href={`https://${url}`} />
-		<title>{titulo}</title>
-		<meta name="keywords" content={keywords} />
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <link rel="canonical" href={`https://${url}`} />
+        <title>{titulo}</title>
+        <meta name="keywords" content={keywords} />
 
-		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:site" content="@carlos_delbarre" />
-		<meta name="twitter:creator" content="@carlos_delbarre" />
-		<meta name="twitter:title" content={titulo} />
-		<meta name="twitter:description" content={descripcion} />
-		<meta name="twitter:image" content="/og.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@carlos_delbarre" />
+        <meta name="twitter:creator" content="@carlos_delbarre" />
+        <meta name="twitter:title" content={titulo} />
+        <meta name="twitter:description" content={descripcion} />
+        <meta name="twitter:image" content="/og.jpg" />
 
-		<meta name="og:image" content="/og.jpg" />
-		<meta name="og:title" content={titulo} />
-		<meta name="og:description" content={descripcion} />
-		<meta name="og:url" content={`https://${url}`} />
-		<meta name="og:site_name" content="Effortia Solutions" />
-		<meta name="og:type" content="website" />
-		<meta name="og:locale" content="es_ES" />
+        <meta name="og:image" content="/og.jpg" />
+        <meta name="og:title" content={titulo} />
+        <meta name="og:description" content={descripcion} />
+        <meta name="og:url" content={`https://${url}`} />
+        <meta name="og:site_name" content="Effortia Solutions" />
+        <meta name="og:type" content="website" />
+        <meta name="og:locale" content="es_ES" />
 
-		<meta name="robots" content="index, follow" />
-		<meta name="googlebot" content="index, follow" />
-		<script defer src="https://overtracking.com/p/P3jtkVclMGIkX2Kb"
-		></script>
-	</head>
-	<body>
-		<Header />
-		<main>
-			<AboutUs />
-			<Clients />
-			<WhyChooseUs />
-			<Services />
-			<Contact />
-			<Footer />
-			<MoveToUp />
-			<Whatsapp />
-		</main>
-	</body>
+        <meta name="robots" content="index, follow" />
+        <meta name="googlebot" content="index, follow" />
+        <script defer src="https://overtracking.com/p/P3jtkVclMGIkX2Kb"
+        ></script>
+    </head>
+    <body>
+        <Header />
+        <main>
+            <AboutUs />
+            <Clients />
+            <Facts />
+            <WhyChooseUs />
+            <Section className="!pt-0">
+                <ClientsLogos client:only="react" />
+            </Section>
+            <Services />
+            <Contact />
+            <Footer />
+            <MoveToUp />
+            <Whatsapp />
+        </main>
+    </body>
 </html>
 
 <style is:global>
-	html {
-		scroll-behavior: smooth;
-	}
+    html {
+        scroll-behavior: smooth;
+    }
 
-	body {
-		@apply text-slate-700;
-		font-family: "Mulish Variable", sans-serif;
-	}
+    body {
+        @apply text-slate-700;
+        font-family: "Mulish Variable", sans-serif;
+    }
 
-	p {
-		@apply leading-normal text-sm md:text-base;
-	}
+    p {
+        @apply leading-normal text-sm md:text-base;
+    }
 </style>
