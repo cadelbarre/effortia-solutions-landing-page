@@ -1,83 +1,79 @@
 {
-    "titulo": "Effortia Agencia Web :: Diseño de paginas y aplicaciones web",
-    "descripcion": "Diseño y desarrollo de páginas web profesionales en barranquilla, optimizadas para generar contactos, cotizaciones y ventas. Diseñamos tu página web de acuerdo a tus necesidades. Desarrollo de aplicaciones móviles.",
-    "keywords": "paginas web, desarrollo web barranquilla, diseño web, diseño web barranquilla, ecommerce, tiendas vituales, desarrollo web colombia, SEO, posicionamiento web, hosting, dominios web, moviles, apps, social media, redes sociales",
-    "empresa": "Effortia Agencia Web",
-    "url": "effortiaweb.com",
-    "slogan": "Diseño inteligente, resultados sorprendentes.",
-    "telefono": "(605) 300 814 3360",
-    "email": "sac@effortiaweb.com",
-    "ubicacion": "Barranquilla, Colombia",
-    "beneficios": [
-        {
-            "nombre": "Diseño y desarrollo de sitios web",
-            "descripcion": "Creación de sitios web personalizados y adaptados a las necesidades de cada cliente.",
-            "icon": "design"
-        },
-        {
-            "nombre": "Optimización para motores de búsqueda (SEO)",
-            "descripcion": "Mejora del posicionamiento en buscadores para aumentar el tráfico y las conversiones.",
-            "icon": "internet"
-        },
-        {
-            "nombre": "Optimización para dispositivos móviles",
-            "descripcion": "Asegurando que el sitio web es fácilmente accesible y legible en dispositivos móviles.",
-            "icon": "mobile"
-        },
-        {
-            "nombre": "Mantenimiento y soporte técnico",
-            "descripcion": "Brindar soporte técnico y mantenimiento para mantener el sitio web actualizado y funcionando sin problemas.",
-            "icon": "laptop"
-        },
-        {
-            "nombre": "Experiencia de usuario",
-            "descripcion": "Diseñamos sitios web con una experiencia de usuario óptima para aumentar la retención de visitantes.",
-            "icon": "user"
-        },
-        {
-            "nombre": "Integración de medios sociales",
-            "descripcion": "Integrando perfiles de redes sociales para conectarse con seguidores.",
-            "icon": "social-media"
-        }
-    ],
-    "introServicios": [
-        "Planes paginas web",
-        "Correos Corporativos",
-        "Posicionamiento web",
-        "Hosting y dominio web"
-    ],
-    "servicios": [
-        {
-            "title": "Diseño Web",
-            "descripcion": "Aplicamos excelentes técnicas de diseño y maquetación web para asegurar una experiencia visualmente atractiva y altamente funcional para los usuarios.",
-            "thumbail": "marcos/diseno-web.avif",
-            "alt": "imagen servicio de diseño web",
-            "items": [
-                "Diseños a la medida",
-                "Prototipado"
-            ]
-        },
-        {
-            "title": "Desarrollo Web",
-            "descripcion": "Implementamos las funcionalidades más avanzadas en el desarrollo de sitios web con el fin de garantizar una experiencia óptima para el usuario.",
-            "thumbail": "marcos/desarrollo-web.avif",
-            "alt": "imagen servicio de desarrollo web",
-            "items": [
-                "Webs corporativas",
-                "E-commerce",
-                "Landing Page"
-            ]
-        },
-        {
-            "title": "Aplicaciones Web",
-            "descripcion": "Integramos herramientas que nos permiten crear y gestionar la variedad de funciones y caracteristicas que ayudan a potenciar tus estrategias de ventas.",
-            "thumbail": "marcos/aplicaciones-web.avif",
-            "alt": "imagen servicio de aplicacion web",
-            "items": [
-                "Software personalizado",
-                "Diseño y desarrollo de app",
-                "Integraciones y complementos"
-            ]
-        }
-    ]
+  "titulo": "Effortia Agencia Web :: Diseño de paginas y aplicaciones web",
+  "descripcion": "Diseño y desarrollo de páginas web profesionales en barranquilla, optimizadas para generar contactos, cotizaciones y ventas. Diseñamos tu página web de acuerdo a tus necesidades. Desarrollo de aplicaciones móviles.",
+  "keywords": "paginas web, desarrollo web barranquilla, diseño web, diseño web barranquilla, ecommerce, tiendas vituales, desarrollo web colombia, SEO, posicionamiento web, hosting, dominios web, moviles, apps, social media, redes sociales",
+  "empresa": "Effortia Agencia Web",
+  "url": "effortiaweb.com",
+  "slogan": "Diseño inteligente, resultados sorprendentes.",
+  "telefono": "(605) 300 814 3360",
+  "email": "sac@effortiaweb.com",
+  "ubicacion": "Barranquilla, Colombia",
+  "beneficios": [
+    {
+      "nombre": "Diseño y desarrollo de sitios web",
+      "descripcion": "Creación de sitios web personalizados y adaptados a las necesidades de cada cliente.",
+      "icon": "design"
+    },
+    {
+      "nombre": "Optimización para motores de búsqueda (SEO)",
+      "descripcion": "Mejora del posicionamiento en buscadores para aumentar el tráfico y las conversiones.",
+      "icon": "internet"
+    },
+    {
+      "nombre": "Optimización para dispositivos móviles",
+      "descripcion": "Asegurando que el sitio web es fácilmente accesible y legible en dispositivos móviles.",
+      "icon": "mobile"
+    },
+    {
+      "nombre": "Mantenimiento y soporte técnico",
+      "descripcion": "Brindar soporte técnico y mantenimiento para mantener el sitio web actualizado y funcionando sin problemas.",
+      "icon": "laptop"
+    },
+    {
+      "nombre": "Experiencia de usuario",
+      "descripcion": "Diseñamos sitios web con una experiencia de usuario óptima para aumentar la retención de visitantes.",
+      "icon": "user"
+    },
+    {
+      "nombre": "Integración de medios sociales",
+      "descripcion": "Integrando perfiles de redes sociales para conectarse con seguidores.",
+      "icon": "social-media"
+    }
+  ],
+  "introServicios": [
+    "Planes paginas web",
+    "Correos Corporativos",
+    "Posicionamiento web",
+    "Hosting y dominio web"
+  ],
+  "servicios": [
+    {
+      "title": "Diseño Web",
+      "descripcion": "Aplicamos excelentes técnicas de diseño y maquetación web para asegurar una experiencia visualmente atractiva y altamente funcional para los usuarios.",
+      "thumbail": "marcos/diseno-web.avif",
+      "thumbailmobile": "marcos/diseno-web-400w.avif",
+      "alt": "imagen servicio de diseño web",
+      "items": ["Diseños a la medida", "Prototipado"]
+    },
+    {
+      "title": "Desarrollo Web",
+      "descripcion": "Implementamos las funcionalidades más avanzadas en el desarrollo de sitios web con el fin de garantizar una experiencia óptima para el usuario.",
+      "thumbail": "marcos/desarrollo-web.avif",
+      "thumbailmobile": "marcos/desarrollo-web-400w.avif",
+      "alt": "imagen servicio de desarrollo web",
+      "items": ["Webs corporativas", "E-commerce", "Landing Page"]
+    },
+    {
+      "title": "Aplicaciones Web",
+      "descripcion": "Integramos herramientas que nos permiten crear y gestionar la variedad de funciones y caracteristicas que ayudan a potenciar tus estrategias de ventas.",
+      "thumbail": "marcos/aplicaciones-web.avif",
+      "thumbailmobile": "marcos/aplicaciones-web-400w.avif",
+      "alt": "imagen servicio de aplicacion web",
+      "items": [
+        "Software personalizado",
+        "Diseño y desarrollo de app",
+        "Integraciones y complementos"
+      ]
+    }
+  ]
 }
