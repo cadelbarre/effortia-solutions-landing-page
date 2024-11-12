@@ -89,6 +89,12 @@ const inputCSS =
     const form = document.querySelector("#form");
     const fieldset = document.querySelector("#form-fieldset");
 
+    const {
+        PUBLIC_SERVICES_EMAIL,
+        PUBLIC_TEMPLATE_EMAIL,
+        PUBLIC_USERKEY_EMAIL,
+    } = import.meta.env;
+
     // Escuchamos el evento submit
     form?.addEventListener("submit", (e) => {
         e.preventDefault();
@@ -108,8 +114,8 @@ const inputCSS =
         }
 
         emailjs
-            .send("service_vjt65x6", "template_pfgd0mc", data, {
-                publicKey: "IF0IZ6pmHpB4Jw65s",
+            .send(PUBLIC_SERVICES_EMAIL, PUBLIC_TEMPLATE_EMAIL, data, {
+                publicKey: PUBLIC_USERKEY_EMAIL,
             })
             .then(
                 (response) =>
