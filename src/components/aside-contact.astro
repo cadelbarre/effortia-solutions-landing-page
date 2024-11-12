@@ -24,7 +24,7 @@ import { email, telefono, ubicacion } from "@assets/business-data.json";
     </div>
     <div class="flex flex-col">
         <h4>Envíanos un correo</h4>
-        <h5 class="text-gray-400">{email}</h5>
+        <a href={`mailto:${email}`} class="text-gray-400">{email}</a>
     </div>
 </div>
 <div class="flex items-center gap-4 border-t py-6 border-gray-600">
@@ -46,7 +46,9 @@ import { email, telefono, ubicacion } from "@assets/business-data.json";
     </div>
     <div class="flex flex-col">
         <h4>Llámanos:</h4>
-        <h5 class="text-gray-400">{telefono}</h5>
+        <a href={`tel:+${telefono.replace(/[^\d]/g, "")}`} class="text-gray-400"
+            >{telefono}</a
+        >
     </div>
 </div>
 
