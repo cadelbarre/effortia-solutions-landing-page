@@ -44,15 +44,19 @@ import { beneficios } from "@assets/business-data.json";
             }
         </ul>
     </div>
-    <div
+    <picture
         class="md:col-span-5 lg:col-span-2 h-full object-cover bg-gray-200 rounded-lg"
     >
+        <source
+            srcset="marcos/beneficios-400w.avif"
+            media="(max-width: 768px)"
+        />
         <img
-            class="rounded-lg h-full object-cover"
+            class="rounded-lg h-full object-cover w-full"
             src="marcos/beneficios.avif"
             alt="beneficios effortia web"
             title="beneficios effortia web"
             loading="lazy"
         />
-    </div>
+    </picture>
 </Section>

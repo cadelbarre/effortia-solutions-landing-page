@@ -18,17 +18,30 @@ import { servicios } from "@assets/business-data.json";
         >
             {
                 servicios.map(
-                    ({ title, thumbail, descripcion, alt, items }) => {
+                    ({
+                        title,
+                        thumbail,
+                        descripcion,
+                        alt,
+                        items,
+                        thumbailmobile,
+                    }) => {
                         return (
                             <article class="transition-transform duration-500 ease-in-out hover:scale-105">
                                 <div class="aspect-square rounded-t-lg bg-gray-100 ">
-                                    <img
-                                        src={thumbail}
-                                        alt={alt}
-                                        title={title}
-                                        class="rounded-t-md h-full aspect-square object-cover"
-                                        loading="lazy"
-                                    />
+                                    <picture>
+                                        <source
+                                            srcset={thumbailmobile}
+                                            media="(max-width: 768px)"
+                                        />
+                                        <img
+                                            src={thumbail}
+                                            alt={alt}
+                                            title={title}
+                                            class="rounded-t-md h-full aspect-square object-cover"
+                                            loading="lazy"
+                                        />
+                                    </picture>
                                 </div>
                                 <div class="p-8 bg-white rounded-b-lg space-y-1">
                                     <h3 class="font-bold text-lg text-primary">
