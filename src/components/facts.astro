@@ -3,39 +3,35 @@ import Section from "./ui/section.astro";
 ---
 
 <Section
-    className="relative bg-gradient-to-l from-primary/90 to-primarydark rounded-xl z-0 !py-16 mx-6 lg:mx-auto"
+  className="relative bg-gradient-to-l from-primary/90 to-primarydark rounded-xl z-0 !py-16 mx-6 lg:mx-auto"
 >
-    <div class="absolute z-10 inset-0 bg-black/5 rounded-xl size-full"></div>
-    <picture class="absolute bottom-0 right-0 xl:right-20 z-20">
-        <source
-            srcset="person-looking-left-500w.webp"
-            media="(max-width: 600px)"
-        />
-        <img
-            src="person-looking-left-500w.webp"
-            alt="persona mirando hacia la izquierda"
-            title="persona mirando hacia la izquierda"
-            loading="lazy"
-            class="h-40 md:h-72 lg:h-96"
-        />
-    </picture>
-    <div
-        class="lg:px-10 max-w-[50ch] text-white text-base md:text-xl font-normal relative z-10"
+  <div class="absolute z-10 inset-0 bg-black/5 rounded-xl size-full"></div>
+  <picture class="absolute bottom-0 right-0 xl:right-20 z-20">
+    <source srcset="person-looking-left-500w.webp" media="(max-width: 600px)" />
+    <img
+      src="person-looking-left-500w.webp"
+      alt="persona mirando hacia la izquierda"
+      title="persona mirando hacia la izquierda"
+      loading="lazy"
+      class="h-40 md:h-72 lg:h-96"
+    />
+  </picture>
+  <div
+    class="lg:px-10 max-w-[50ch] text-white text-base md:text-xl font-normal relative z-10"
+  >
+    <blockquote class="pb-10">
+      El <span class="text-xl xl:text-2xl font-extrabold">80%</span> de usuarios
+      de smartphones tienen muchas más probabilidades de realizar una compra cuando
+      las <span class="text-lg xl:text-xl font-extrabold">
+        empresas cuentan con sitios web ó aplicaciones móviles
+      </span> que les facilitan encontrar respuestas claras y rápidas a sus preguntas
+    </blockquote>
+    <a
+      href="https://mktefa.ditrendia.es/blog/estadisticas-sobre-m%C3%B3viles"
+      target="_blank"
+      class="text-xs italic"
     >
-        <blockquote class="pb-10">
-            El <span class="text-xl xl:text-2xl font-extrabold">80%</span> de usuarios
-            de smartphones tienen muchas más probabilidades de realizar una compra
-            cuando las <span class="text-xl xl:text-2xl font-extrabold">
-                empresas cuentan con sitios web ó aplicaciones móviles
-            </span> que les facilitan encontrar respuestas claras y rápidas a sus
-            preguntas
-        </blockquote>
-        <a
-            href="https://mktefa.ditrendia.es/blog/estadisticas-sobre-m%C3%B3viles"
-            target="_blank"
-            class="text-xs italic"
-        >
-            https://mktefa.ditrendia.es
-        </a>
-    </div>
+      https://mktefa.ditrendia.es
+    </a>
+  </div>
 </Section>
