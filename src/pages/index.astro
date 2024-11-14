@@ -1,69 +1,35 @@
 ---
 import "@fontsource-variable/mulish";
+
+import Layout from "@/layouts/index.astro";
 import WhyChooseUs from "@components/why-choose-us.astro";
-import Header from "@components/header.astro";
 import Services from "@components/services.astro";
-import AboutUs from "@components/about-us.astro";
 import Section from "@components/ui/section.astro";
+import Header from "@components/header.astro";
 import Footer from "@components/footer.astro";
-import MoveToUp from "@components/move-to-up.astro";
-import Whatsapp from "@components/whatsapp.astro";
+
+import AboutUs from "@components/about-us.astro";
 import Contact from "@components/contact.astro";
 import Clients from "@components/clients.astro";
 import Facts from "@components/facts.astro";
 import ClientsLogos from "@components/clientes-logos";
-
-import { titulo, descripcion, keywords, url } from "@assets/business-data.json";
 ---
 
-<html lang="es">
-    <head>
-        <meta charset="utf-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta name="viewport" content="width=device-width" />
-        <meta name="generator" content={Astro.generator} />
-        <link rel="canonical" href={`https://${url}`} />
-        <title>{titulo}</title>
-        <meta name="keywords" content={keywords} />
-
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@carlos_delbarre" />
-        <meta name="twitter:creator" content="@carlos_delbarre" />
-        <meta name="twitter:title" content={titulo} />
-        <meta name="twitter:description" content={descripcion} />
-        <meta name="twitter:image" content="/og.jpg" />
-
-        <meta name="og:image" content="/og.jpg" />
-        <meta name="og:title" content={titulo} />
-        <meta name="og:description" content={descripcion} />
-        <meta name="og:url" content={`https://${url}`} />
-        <meta name="og:site_name" content="Effortia Solutions" />
-        <meta name="og:type" content="website" />
-        <meta name="og:locale" content="es_ES" />
-
-        <meta name="robots" content="index, follow" />
-        <meta name="googlebot" content="index, follow" />
-        <script defer src="https://overtracking.com/p/P3jtkVclMGIkX2Kb"
-        ></script>
-    </head>
-    <body>
-        <Header />
-        <main>
-            <AboutUs />
-            <Clients />
-            <Facts />
-            <WhyChooseUs />
-            <Section className="!pt-0">
-                <ClientsLogos client:only="react" />
-            </Section>
-            <Services />
-            <Contact />
-            <Footer />
-            <MoveToUp />
-            <Whatsapp />
-        </main>
-    </body>
-</html>
+<Layout>
+    <Header />
+    <main>
+        <AboutUs />
+        <Clients />
+        <Facts />
+        <Section className="!pb-0">
+            <ClientsLogos client:only="react" />
+        </Section>
+        <WhyChooseUs />
+        <Services />
+        <Contact />
+    </main>
+    <Footer />
+</Layout>
 
 <style is:global>
     html {

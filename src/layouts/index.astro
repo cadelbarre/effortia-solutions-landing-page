@@ -1,0 +1,58 @@
+---
+import "@fontsource-variable/mulish";
+import MoveToUp from "@components/move-to-up.astro";
+import Whatsapp from "@components/whatsapp.astro";
+
+import { titulo, descripcion, keywords, url } from "@assets/business-data.json";
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="canonical" href={`https://${url}`} />
+    <title>{titulo}</title>
+    <meta name="keywords" content={keywords} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@carlos_delbarre" />
+    <meta name="twitter:creator" content="@carlos_delbarre" />
+    <meta name="twitter:title" content={titulo} />
+    <meta name="twitter:description" content={descripcion} />
+    <meta name="twitter:image" content="/og.jpg" />
+
+    <meta name="og:image" content="/og.jpg" />
+    <meta name="og:title" content={titulo} />
+    <meta name="og:description" content={descripcion} />
+    <meta name="og:url" content={`https://${url}`} />
+    <meta name="og:site_name" content="Effortia Solutions" />
+    <meta name="og:type" content="website" />
+    <meta name="og:locale" content="es_ES" />
+
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    <script defer src="https://overtracking.com/p/P3jtkVclMGIkX2Kb"></script>
+  </head>
+  <body class="overflow-x-hidden">
+    <slot />
+    <MoveToUp />
+    <Whatsapp />
+  </body>
+</html>
+
+<style is:global>
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply text-slate-700;
+    font-family: "Mulish Variable", sans-serif;
+  }
+
+  p {
+    @apply leading-normal text-sm md:text-base;
+  }
+</style>
