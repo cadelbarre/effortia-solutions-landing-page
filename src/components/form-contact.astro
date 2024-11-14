@@ -2,135 +2,128 @@
 import Button from "@components/ui/button.astro";
 
 const inputCSS =
-    "w-full py-2 px-4 bg-transparent outline-none border border-gray-400 rounded-md disabled:bg-gray-400/20 disabled:cursor-wait";
+  "w-full py-2 px-4 bg-transparent outline-none border border-gray-400 rounded-md disabled:bg-gray-400/20 disabled:cursor-wait";
 ---
 
 <fieldset id="form-fieldset">
-    <form
-        class="flex flex-col md:grid md:grid-cols-2 gap-x-8 gap-y-4 mt-8"
-        id="form"
-    >
-        <label class="block text-gray-800 space-y-1">
-            <span class="font-medium md:text-base text-sm">Nombre</span>
-            <input
-                type="text"
-                id="nombre"
-                name="nombre"
-                placeholder="Carlos Perez"
-                required
-                class={inputCSS}
-            />
-        </label>
+  <form
+    class="flex flex-col md:grid md:grid-cols-2 gap-x-8 gap-y-4 mt-8"
+    id="form"
+  >
+    <label class="block text-gray-800 space-y-1">
+      <span class="font-medium md:text-base text-sm">Nombre</span>
+      <input
+        type="text"
+        id="nombre"
+        name="nombre"
+        placeholder="Carlos Perez"
+        required
+        class={inputCSS}
+      />
+    </label>
 
-        <label class="block text-gray-800 space-y-1">
-            <span class="font-medium md:text-base text-sm"
-                >Correo Electronico</span
-            >
-            <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="nicolas@mail.com"
-                required
-                class={inputCSS}
-            />
-        </label>
+    <label class="block text-gray-800 space-y-1">
+      <span class="font-medium md:text-base text-sm">Correo Electronico</span>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="nicolas@mail.com"
+        required
+        class={inputCSS}
+      />
+    </label>
 
-        <label class="block text-gray-800 space-y-1">
-            <span class="font-medium md:text-base text-sm">Celular</span>
-            <input
-                type="text"
-                id="celular"
-                name="celular"
-                placeholder="3001232456"
-                required
-                class={inputCSS}
-            />
-        </label>
+    <label class="block text-gray-800 space-y-1">
+      <span class="font-medium md:text-base text-sm">Celular</span>
+      <input
+        type="text"
+        id="celular"
+        name="celular"
+        placeholder="3001232456"
+        required
+        class={inputCSS}
+      />
+    </label>
 
-        <label class="block text-gray-800 space-y-1">
-            <span class="font-medium md:text-base text-sm">Interés</span>
-            <select name="interes" id="interes" class={inputCSS}>
-                <option value="">Seleccione</option>
-                <option value="Desarrollo Web">Desarrollo Web</option>
-                <option value="ecommerce">E-commerce</option>
-                <option value="Aplicacion web">Aplicación Web</option>
-                <option value="Asesoría Profesional"
-                    >Asesoría Profesional</option
-                >
-            </select>
-        </label>
+    <label class="block text-gray-800 space-y-1">
+      <span class="font-medium md:text-base text-sm">Interés</span>
+      <select name="interes" id="interes" class={inputCSS}>
+        <option value="">Seleccione</option>
+        <option value="Desarrollo Web">Desarrollo Web</option>
+        <option value="ecommerce">E-commerce</option>
+        <option value="Aplicacion web">Aplicación Web</option>
+        <option value="Asesoría Profesional">Asesoría Profesional</option>
+      </select>
+    </label>
 
-        <label class="block text-gray-800 space-y-1 col-span-2">
-            <span class="font-medium md:text-base text-sm">Mensaje</span>
-            <textarea
-                cols="10"
-                rows="5"
-                id="mensaje"
-                name="mensaje"
-                placeholder="Estoy interesad@ en..."
-                required
-                class={inputCSS}></textarea>
-        </label>
+    <label class="block text-gray-800 space-y-1 col-span-2">
+      <span class="font-medium md:text-base text-sm">Mensaje</span>
+      <textarea
+        cols="10"
+        rows="5"
+        id="mensaje"
+        name="mensaje"
+        placeholder="Estoy interesad@ en..."
+        required
+        class={inputCSS}></textarea>
+    </label>
 
-        <div class="col-span-2 md:col-span-1">
-            <Button className="w-full disabled:opacity-90 disabled:cursor-wait"
-                >Enviar</Button
-            >
-        </div>
-    </form>
+    <div class="col-span-2 md:col-span-1">
+      <Button className="w-full disabled:opacity-90 disabled:cursor-wait"
+        >Enviar</Button
+      >
+    </div>
+  </form>
 </fieldset>
 
 <script>
-    import emailjs from "@emailjs/browser";
-    import swal from "sweetalert";
-    import isEmpty from "just-is-empty";
+  import emailjs from "@emailjs/browser";
+  import swal from "sweetalert";
+  import isEmpty from "just-is-empty";
 
-    const form = document.querySelector("#form");
-    const fieldset = document.querySelector("#form-fieldset");
+  const form = document.querySelector("#form");
+  const fieldset = document.querySelector("#form-fieldset");
 
-    const {
-        PUBLIC_SERVICES_EMAIL,
-        PUBLIC_TEMPLATE_EMAIL,
-        PUBLIC_USERKEY_EMAIL,
-    } = import.meta.env;
+  const { PUBLIC_SERVICES_EMAIL, PUBLIC_TEMPLATE_EMAIL, PUBLIC_USERKEY_EMAIL } =
+    import.meta.env;
 
-    // Escuchamos el evento submit
-    form?.addEventListener("submit", (e) => {
-        e.preventDefault();
-        const target = e.target as HTMLFormElement;
+  // Escuchamos el evento submit
+  form?.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const target = e.target as HTMLFormElement;
 
-        // Objeto con la información del formulario
-        const data = Object.fromEntries(new FormData(target));
+    // Objeto con la información del formulario
+    const data = Object.fromEntries(new FormData(target));
 
-        // Asignamos disabled para que no envien nuevamente
-        fieldset?.setAttribute("disabled", "true");
+    // Asignamos disabled para que no envien nuevamente
+    fieldset?.setAttribute("disabled", "true");
 
-        if (isEmpty(data)) {
-            return swal({
-                title: "Ha ocurrido un error con el servidor",
-                icon: "error",
-            });
-        }
+    if (isEmpty(data)) {
+      return swal({
+        title: "Ha ocurrido un error con el servidor",
+        icon: "error",
+      });
+    }
 
-        emailjs
-            .send(PUBLIC_SERVICES_EMAIL, PUBLIC_TEMPLATE_EMAIL, data, {
-                publicKey: PUBLIC_USERKEY_EMAIL,
-            })
-            .then(
-                (response) =>
-                    swal({
-                        title: "Correo enviado correctamente",
-                        icon: "success",
-                    }),
-                void target.reset(),
-            )
-            .catch((error) =>
-                swal({
-                    title: "Error al momento de enviar el correo",
-                    icon: "error",
-                }),
-            )
-            .finally(() => fieldset?.removeAttribute("disabled"));
-    });
+    /** Enviamos en correo */
+    emailjs
+      .send(PUBLIC_SERVICES_EMAIL, PUBLIC_TEMPLATE_EMAIL, data, {
+        publicKey: PUBLIC_USERKEY_EMAIL,
+      })
+      .then((response) => {
+        swal({
+          title: "Correo enviado correctamente",
+          icon: "success",
+        }),
+          void target.reset();
+      })
+      .catch((error) => {
+        swal({
+          title: "Error al momento de enviar el correo",
+          icon: "error",
+        });
+      })
+      .finally(() => fieldset?.removeAttribute("disabled"));
+  });
 </script>
