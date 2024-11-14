@@ -2,97 +2,100 @@
 import Bars from "@components/icons/bars.astro";
 
 const menu = [
-    {
-        href: "#",
-        title: "inicio",
-        text: "Inicio",
-    },
-    {
-        href: "#sobre-nosotros",
-        title: "sobre nosotros",
-        text: "Sobre Nosotros",
-    },
-    {
-        href: "#porque-elegirnos",
-        title: "beneficios",
-        text: "Beneficios",
-    },
-    {
-        href: "#servicios",
-        title: "servicios",
-        text: "Servicios",
-    },
-    {
-        href: "#contacto",
-        title: "contacto",
-        text: "Contacto",
-    },
+  {
+    href: "#",
+    title: "inicio",
+    text: "Inicio",
+  },
+  {
+    href: "#sobre-nosotros",
+    title: "sobre nosotros",
+    text: "Sobre Nosotros",
+  },
+  {
+    href: "#proyectos-destacados",
+    title: "proyectos destacados",
+    text: "Proyectos",
+  },
+  {
+    href: "#porque-elegirnos",
+    title: "beneficios",
+    text: "Beneficios",
+  },
+  {
+    href: "#servicios",
+    title: "servicios",
+    text: "Servicios",
+  },
+  {
+    href: "#contacto",
+    title: "contacto",
+    text: "Contacto",
+  },
 ];
 ---
 
 <nav class="text-white relative z-30 border-b border-gray-100/20 py-3 lg:py-5">
+  <div
+    class="max-w-6xl mx-auto px-6 md:px-10 xl:px-0 flex justify-between items-center"
+  >
+    <a href="#">
+      <img
+        src="effortia-logo-white.png"
+        alt="logo de effortia agencia web"
+        class="h-8 lg:h-12"
+      />
+    </a>
+
     <div
-        class="max-w-6xl mx-auto px-6 md:px-10 xl:px-0 flex justify-between items-center"
+      class="block lg:hidden p-2"
+      id="mobile-bars"
+      title="navegación desde moviles"
     >
-        <a href="#">
-            <img
-                src="effortia-logo-white.png"
-                alt="logo de effortia agencia web"
-                class="h-8 lg:h-12"
-            />
-        </a>
-
-        <div
-            class="block lg:hidden p-2"
-            id="mobile-bars"
-            title="navegación desde moviles"
-        >
-            <Bars />
-            <ul
-                class="absolute right-4 w-[90vw] mt-6 hidden flex-col [&>a]:bg-white [&>a]:border-b [&>a]:border-gray-300 [&>a]:px-3 [&>a]:py-5 [&>a]:text-gray-700 [&>a]:font-semibold"
-                data-visible="false"
-            >
-                {
-                    menu.map(({ href, title, text }) => (
-                        <a href={href} title={title}>
-                            {text}
-                        </a>
-                    ))
-                }
-            </ul>
-        </div>
-
-        <ul
-            class="hidden lg:block space-x-6 uppercase font-bold text-sm [&>a]:cursor-pointer hover:[&>a]:text-primary transition [&>a]:duration-100 [&>a]:ease-in"
-            title="navegación desde computador"
-        >
-            {
-                menu.map(({ href, title, text }) => (
-                    <a href={href} title={title}>
-                        {text}
-                    </a>
-                ))
-            }
-        </ul>
+      <Bars />
+      <ul
+        class="absolute right-4 w-[90vw] mt-6 hidden flex-col [&>a]:bg-white [&>a]:border-b [&>a]:border-gray-300 [&>a]:px-3 [&>a]:py-5 [&>a]:text-gray-700 [&>a]:font-semibold"
+        data-visible="false"
+      >
+        {
+          menu.map(({ href, title, text }) => (
+            <a href={href} title={title}>
+              {text}
+            </a>
+          ))
+        }
+      </ul>
     </div>
+
+    <ul
+      class="hidden lg:block space-x-6 uppercase font-bold text-sm [&>a]:cursor-pointer hover:[&>a]:text-primary transition [&>a]:duration-100 [&>a]:ease-in"
+      title="navegación desde computador"
+    >
+      {
+        menu.map(({ href, title, text }) => (
+          <a href={href} title={title}>
+            {text}
+          </a>
+        ))
+      }
+    </ul>
+  </div>
 </nav>
 
 <script>
-    document.querySelector("#mobile-bars")?.addEventListener("click", () => {
-        const menu = document.querySelector(
-            "[data-visible]",
-        ) as HTMLUListElement;
+  document.querySelector("#mobile-bars")?.addEventListener("click", () => {
+    const menu = document.querySelector("[data-visible]") as HTMLUListElement;
 
-        const isVisible = menu.dataset.visible;
+    const isVisible = menu.dataset.visible;
 
-        if (isVisible === "true") {
-            menu.classList.remove("flex");
-            menu.classList.add("hidden");
-            menu.dataset.visible = "false";
-        } else {
-            menu.classList.remove("hidden");
-            menu.classList.add("flex");
-            menu.dataset.visible = "true";
-        }
-    });
+    if (isVisible === "true") {
+      menu.classList.remove("flex");
+      menu.classList.add("hidden");
+      menu.dataset.visible = "false";
+    } else {
+      menu.classList.remove("hidden");
+      menu.classList.add("flex");
+      menu.dataset.visible = "true";
+    }
+  });
 </script>
