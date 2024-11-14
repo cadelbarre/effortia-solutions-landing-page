@@ -50,10 +50,11 @@ const WEPAPP_JOBS = [
             class="h-[300px] relative"
           >
             <img
+              decoding="async"
               src={thumbnail}
               alt={alt}
               class="size-full object-cover object-center"
-              loading="lazy"
+              loading="eager"
             />
           </a>
 
@@ -65,7 +66,7 @@ const WEPAPP_JOBS = [
                   href={image}
                   data-caption={caption}
                 >
-                  <img src={image} loading="lazy" />
+                  <img decoding="async" src={image} loading="lazy" />
                 </a>
               );
             })}
