@@ -1,24 +1,8 @@
 ---
 import Section from "@components/ui/section.astro";
 import Title from "@components/ui/title.astro";
-
-const CLIENTES = [
-    {
-        title: "UNESI SAS :: UNIDAD DE NEUROCIRUGIA ENDOVASCULAR STROKE E INTERVENCIONISMO S.A.S.",
-        img: "clientes/unesi-mockup.webp",
-        alt: "unesi sas mockup",
-        href: "https://www.unesi.com.co",
-        businessName:
-            "UNESI SAS :: UNIDAD DE NEUROCIRUGIA ENDOVASCULAR STROKE E INTERVENCIONISMO S.A.S.",
-    },
-    {
-        title: "Comercializadora ZEYMA SAS",
-        img: "clientes/zeyma-mockup.webp",
-        alt: "comercializadora zeyma sas mockup",
-        href: "https://www.zeyma.co",
-        businessName: "Comercializadora ZEYMA S.A.S",
-    },
-];
+import ClientsWebsite from "./clients-website.astro";
+import ClientsWebapps from "./clients-webapps.astro";
 ---
 
 <div class="bg-slate-100/50">
@@ -27,47 +11,27 @@ const CLIENTES = [
             class="md:col-span-3 space-y-5 md:space-y-8"
             id="proyectos-destacados"
         >
-            <header class="space-y-2">
-                <span class="text-primary font-extrabold text-sm"
-                    >Clientes que confian en nuestro trabajo</span
-                >
-                <Title text="Proyectos Destacados" className="text-balance" />
+            <header>
+                <div class="space-y-2">
+                    <span class="text-primary font-extrabold text-sm"
+                        >Clientes que confian en nuestro trabajo</span
+                    >
+                    <Title
+                        text="Proyectos Destacados"
+                        className="text-balance"
+                    />
+                </div>
+                <p class="max-w-[50ch] mx-auto">
+                    Nuestros clientes confían en nosotros como desarrolladores
+                    de páginas web porque ofrecemos soluciones a medida que
+                    reflejan la visión y objetivos de la empresa.
+                </p>
             </header>
-            <p class="max-w-[50ch] mx-auto">
-                Nuestros clientes confían en nosotros como desarrolladores de
-                páginas web porque ofrecemos soluciones a medida que reflejan la
-                visión y objetivos de la empresa.
-            </p>
             <hr />
 
-            <div
-                class="grid lg:grid-cols-2 gap-x-6 md:gap-x-12 gap-y-8 md:gap-y-10"
-            >
-                {
-                    CLIENTES.map(({ title, img, alt, href, businessName }) => {
-                        return (
-                            <a
-                                href={href}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="relative w-full h-full hover:scale-110 duration-500 ease-in-out group"
-                            >
-                                <picture>
-                                    <img
-                                        src={img}
-                                        alt={alt}
-                                        class="rounded-lg h-full object-cover shadow-xl"
-                                        title={title}
-                                        loading="lazy"
-                                    />
-                                </picture>
-                                <div class="opacity-0 group-hover:opacity-100 transition duration-500 ease-out absolute bottom-0 right-0 bg-gradient-to-t from-gray-800 to-transparent text-white w-full pt-6 pb-3 text-sm text-balance font-bold rounded-b-lg">
-                                    {businessName}
-                                </div>
-                            </a>
-                        );
-                    })
-                }
+            <div class="space-y-12">
+                <ClientsWebsite />
+                <ClientsWebapps />
             </div>
         </div>
     </Section>

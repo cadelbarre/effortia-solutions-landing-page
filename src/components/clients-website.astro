@@ -1,0 +1,67 @@
+---
+const CLIENTES_JOBS = [
+    {
+        src: "cemir-mockup",
+        url: "https://www.mirefugiocemir.com",
+        title: "Página web Centro Educativo Mi refugio",
+        businessName: "Centro Educativo Mi refugio :: Cemir",
+    },
+    {
+        src: "unesi-mockup",
+        url: "https://www.unesi.com.co",
+        title: "Página web UNESI SAS",
+        businessName: "UNESI SAS :: Doctor Jairo Fernandez.",
+    },
+    {
+        src: "zeyma-mockup",
+        url: "https://www.zeyma.co",
+        title: "Página web Comercializadora ZEYMA SAS",
+        businessName: "Comercializadora ZEYMA S.A.S",
+    },
+];
+---
+
+<article
+    id="websites"
+    class="grid lg:grid-cols-3 gap-x-6 md:gap-x-12 gap-y-8 md:gap-y-10"
+>
+    <header class="col-span-3 text-start">
+        <h2 class="font-bold text-2xl text-primarydark">Desarrollo Web</h2>
+        <p class="max-w-prose">
+            Integramos las más altas funcionalidades en el desarrollo de sitios
+            web para asegurar que el usuario pueda disfrutar de una buena
+            experiencia
+        </p>
+    </header>
+    {
+        CLIENTES_JOBS.map(({ url, src, title, businessName }) => {
+            return (
+                <div class="h-[400px] relative overflow-hidden rounded-lg shadow-xl group">
+                    <a
+                        href={url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="block"
+                    >
+                        <picture class="">
+                            <source
+                                media="(max-width: 768px)"
+                                srcset={`/clientes/websites/${src}-300w.webp`}
+                            />
+                            <img
+                                src={`/clientes/websites/${src}-500w.webp`}
+                                alt={title}
+                                class="absolute z-10 object-cover top-0 group-hover:[transform:translateY(calc(-100%+400px))] transition-all duration-[5000ms] ease-in-out"
+                                title={title}
+                                loading="lazy"
+                            />
+                        </picture>
+                        <div class="translate-y-20 group-hover:translate-y-0 transition duration-700 ease-out absolute bottom-0 right-0 z-20 bg-black/50 to-transparent text-white w-full py-4 text-sm text-balance font-bold rounded-b-lg">
+                            {businessName}
+                        </div>
+                    </a>
+                </div>
+            );
+        })
+    }
+</article>
