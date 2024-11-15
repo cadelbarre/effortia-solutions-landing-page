@@ -3,14 +3,14 @@ import ArrowUp from "@components/icons/arrow-up.astro";
 ---
 
 <div
-    class="fixed bottom-0 right-4 mb-4 mr-2 rounded-full grid place-content-end cursor-pointer transition-transform duration-300 ease-in-out hover:-translate-y-1"
-    id="moveUp"
+  class="fixed z-20 bottom-0 right-4 mb-4 mr-2 rounded-full grid place-content-end cursor-pointer transition-transform duration-300 ease-in-out hover:-translate-y-1"
+  id="moveUp"
 >
-    <ArrowUp color="#ED7D3A" className="w-14 h-14" />
+  <ArrowUp color="#ED7D3A" className="w-14 h-14" />
 </div>
 
 <script>
-    document
-        .querySelector("#moveUp")
-        ?.addEventListener("click", () => window.scrollTo({ top: 0 }));
+  document
+    .querySelector("#moveUp")
+    ?.addEventListener("click", () => window.scrollTo({ top: 0 }));
 </script>
