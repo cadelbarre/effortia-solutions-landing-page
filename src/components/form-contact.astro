@@ -1,6 +1,14 @@
 ---
 import Button from "@components/ui/button.astro";
 
+export interface BodyI {
+  nombre: string;
+  email: string;
+  celular: string;
+  mensaje: string;
+  interes: string;
+}
+
 const inputCSS =
   "w-full py-2 px-4 bg-transparent outline-none border border-gray-400 rounded-md disabled:bg-gray-400/20 disabled:cursor-wait";
 ---
@@ -78,9 +86,16 @@ const inputCSS =
 </fieldset>
 
 <script>
-  import emailjs from "@emailjs/browser";
   import swal from "sweetalert";
   import isEmpty from "just-is-empty";
+
+  export interface BodyI {
+    nombre: string;
+    email: string;
+    celular: string;
+    mensaje: string;
+    interes: string;
+  }
 
   const form = document.querySelector("#form");
   const fieldset = document.querySelector("#form-fieldset");
@@ -89,7 +104,7 @@ const inputCSS =
     import.meta.env;
 
   // Escuchamos el evento submit
-  form?.addEventListener("submit", (e) => {
+  form?.addEventListener("submit", async (e) => {
     e.preventDefault();
     const target = e.target as HTMLFormElement;
 
@@ -106,24 +121,49 @@ const inputCSS =
       });
     }
 
+    const response = await fetch("/api/sendmail.json", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    const json = await response.json();
+
+    if (json.success) {
+      swal({
+        title: "Correo enviado correctamente",
+        icon: "success",
+      }),
+        void target.reset();
+    } else {
+      swal({
+        title: "Error al momento de enviar el correo",
+        icon: "error",
+      });
+    }
+
+    fieldset?.removeAttribute("disabled");
+
     /** Enviamos en correo */
-    emailjs
-      .send(PUBLIC_SERVICES_EMAIL, PUBLIC_TEMPLATE_EMAIL, data, {
-        publicKey: PUBLIC_USERKEY_EMAIL,
-      })
-      .then((response) => {
-        swal({
-          title: "Correo enviado correctamente",
-          icon: "success",
-        }),
-          void target.reset();
-      })
-      .catch((error) => {
-        swal({
-          title: "Error al momento de enviar el correo",
-          icon: "error",
-        });
-      })
-      .finally(() => fieldset?.removeAttribute("disabled"));
+    // emailjs
+    //   .send(PUBLIC_SERVICES_EMAIL, PUBLIC_TEMPLATE_EMAIL, data, {
+    //     publicKey: PUBLIC_USERKEY_EMAIL,
+    //   })
+    //   .then((response) => {
+    //     swal({
+    //       title: "Correo enviado correctamente",
+    //       icon: "success",
+    //     }),
+    //       void target.reset();
+    //   })
+    //   .catch((error) => {
+    //     swal({
+    //       title: "Error al momento de enviar el correo",
+    //       icon: "error",
+    //     });
+    //   })
+    //   .finally(() => fieldset?.removeAttribute("disabled"));
   });
 </script>
