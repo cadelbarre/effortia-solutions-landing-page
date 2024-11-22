@@ -31,9 +31,9 @@ const WEPAPP_JOBS = [
 
 <article
   id="webapps"
-  class="grid lg:grid-cols-3 gap-x-6 md:gap-x-12 gap-y-8 md:gap-y-10"
+  class="grid lg:grid-cols-2 gap-x-6 md:gap-x-12 gap-y-8 md:gap-y-10"
 >
-  <header class="col-span-3 text-start">
+  <header class="col-span-2 text-start">
     <h2 class="font-bold text-2xl text-primarydark">Aplicaciones Webs</h2>
     <p class="max-w-prose">
       Encargar el desarrollo y la creación de aplicaciones web te asegura una
@@ -43,7 +43,7 @@ const WEPAPP_JOBS = [
   {
     WEPAPP_JOBS.map(({ thumbnail, images, caption, galleryName, alt }) => {
       return (
-        <div class=" relative overflow-hidden rounded-lg shadow-xl group">
+        <div class="col-span-1 relative overflow-hidden rounded-lg shadow-xl group">
           <a
             href={thumbnail}
             data-fancybox={galleryName}
